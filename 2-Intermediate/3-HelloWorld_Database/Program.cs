@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Common;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Dapper;
@@ -19,7 +20,7 @@ namespace HelloWorld
 
             DateTime rightNow = dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
 
-            // Console.WriteLine(rightNow.ToString());
+             //Console.WriteLine(rightNow.ToString());
             
             Computer myComputer = new Computer() 
             {
@@ -44,7 +45,7 @@ namespace HelloWorld
                 ReleaseDate,
                 Price,
                 VideoCard
-            ) VALUES ('" + myComputer.Motherboard 
+            ) VALUES ('" + myComputer.Motherboard
                     + "','" + myComputer.HasWifi
                     + "','" + myComputer.HasLTE
                     + "','" + myComputer.ReleaseDate.ToString("yyyy-MM-dd")
