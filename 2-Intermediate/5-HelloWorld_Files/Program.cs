@@ -26,7 +26,6 @@ namespace HelloWorld
                 Price = 943.87m,
                 VideoCard = "RTX 2060"
             };
-
             string sql = @"INSERT INTO TutorialAppSchema.Computer (
                 Motherboard,
                 HasWifi,
