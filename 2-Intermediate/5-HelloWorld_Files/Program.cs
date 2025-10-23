@@ -50,6 +50,7 @@ namespace HelloWorld
             openFile.Close();
 
             string fileText = File.ReadAllText("log.txt");
+            
             Console.WriteLine(fileText);
         }
 
